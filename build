@@ -30,9 +30,8 @@ up(){
 	# 14 days, 10 GB limit
 }
 
-make api-stubs-docs 
-make system-api-stubs-docs 
-make test-api-stubs-docs
+make init
+make bootimg
 make sepolicy
 
 make nad 
