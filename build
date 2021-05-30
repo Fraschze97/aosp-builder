@@ -31,7 +31,7 @@ up(){
 }
 
 make init
-make bootimg
+make bootimage
 make sepolicy
 
 make nad 
