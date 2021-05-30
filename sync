@@ -13,3 +13,8 @@ git clone https://github.com/Fraschze97/local_manifest.git --depth 1 -b nusantar
 
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 8
+
+cd external/selinux
+curl -LO  https://github.com/PixelExperience/external_selinux/commit/9d6ebe89430ffe0aeeb156f572b2a810f9dc98cc.patch
+patch -p1 < *.patch
+cd ../..

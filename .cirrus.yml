@@ -4,12 +4,12 @@ env:
     rclone_config: "ENCRYPTED[c8aad557d671b5232b1a18644368d39dfc41e4b9224e40546300cdbf0270589070d828c1520a7097baf113bdd1245807]" 
 
 task:
-    name: NusantaraProject
+    name: NusantaraProject-test
     timeout_in: 120m 
     container:
       image: apon77/aosp:latest 
-      cpu: 8
-      memory: 24G # So that we can have ram when needed, 24G highest
+      cpu: 4
+      memory: 16G # So that we can have ram when needed, 24G highest
     download_ccache_background_script: # To download ccache in background
       - ./download_ccache 
     sync_script: # To sync source
