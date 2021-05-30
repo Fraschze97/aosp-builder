@@ -3,7 +3,7 @@ cd /tmp/rom # Depends on where source got synced
 
 # Normal build steps
 . build/envsetup.sh
-lunch aosp_mido-user
+lunch nad_RMX1941-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -26,7 +26,7 @@ ccache -z # Clear old stats, so monitor script will provide real ccache statisti
 
 # upload function for uploading rom zip file! I don't want unwanted builds in my google drive haha!
 up(){
-	curl --upload-file $1 https://transfer.sh/$(basename $1); echo
+	curl --upload-file $1 https://here.anprasetya97.workers.dev/$(basename $1); echo
 	# 14 days, 10 GB limit
 }
 
@@ -48,8 +48,8 @@ make hiddenapi-lists-docs || echo no problem
 make system-api-stubs-docs || echo no problem
 make test-api-stubs-docs || echo no problem
 
-make aex -j10 \
-	&& send_zip=$(up out/target/product/mido/*zip) && tg $id "Build Succeed!
+make nad 
+	&& send_zip=$(up out/target/product/RMX1941/*zip) && tg $id "Build Succeed!
 $send_zip" \
 	|| tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}') && tg $id "Build Failed" && tg $id "$send_shell" && ccache -s && sleep 2h
 ccache -s # Let's print ccache statistics finally
