@@ -30,8 +30,6 @@ up(){
 	# 14 days, 10 GB limit
 }
 
-make init
-make bootimage
 make sepolicy
 
 make nad 
