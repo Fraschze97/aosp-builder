@@ -30,18 +30,10 @@ up(){
 	# 14 days, 10 GB limit
 }
 
-tg(){
-	your_telegram_id=$1 # No need to touch
-	msg=$2 # No need to touch
-	curl -s "https://api.telegram.org/bot${bot_api}/sendmessage" --data "text=$msg&chat_id=${your_telegram_id}"
-}
-
-id=https://t.me/Noob_permanently # Your telegram id
-
 make api-stubs-docs 
-make hiddenapi-lists-docs 
 make system-api-stubs-docs 
 make test-api-stubs-docs
+make sepolicy
 
 make nad 
 	&& send_zip=$(up out/target/product/RMX1941/*zip) && tg $id "Build Succeed!
