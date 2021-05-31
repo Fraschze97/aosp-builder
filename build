@@ -13,7 +13,6 @@ ccache -o compression=true
 ccache -z
 
 make init
-make bootimage
 make sepolicy
 
 make nad &

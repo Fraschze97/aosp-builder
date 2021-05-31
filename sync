@@ -19,9 +19,4 @@ git clone "$LOCAL_MANIFEST" --depth 1 -b "$MANIFEST_BRANCH" .repo/local_manifest
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# patches
-cd frameworks/opt/net/wifi
-curl -LO https://github.com/Fraschze97/android_frameworks_opt_net_wifi/commit/d53535f92adba2780cc77b5549a815b75d2e3b2a.patch
-patch -p1 < *.patch
-cd ../..
 
