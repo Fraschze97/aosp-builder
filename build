@@ -12,11 +12,9 @@ ccache -M 10G
 ccache -o compression=true
 ccache -z
 
-make sepolicy
-
 make init
-
 make bootimage
+make sepolicy
 
 make nad &
 sleep 75m
