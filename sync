@@ -3,7 +3,7 @@
 set -evx
 
 ROM_MANIFEST=https://github.com/NusantaraProject-ROM/android_manifest.git
-BRANCH=11
+BRANCH=10
 LOCAL_MANIFEST=https://github.com/Fraschze97/local_manifest.git
 MANIFEST_BRANCH=nusantara
 
