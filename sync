@@ -2,10 +2,10 @@
 
 set -evx
 
-ROM_MANIFEST=https://github.com/NusantaraProject-ROM/android_manifest.git
-BRANCH=11
-LOCAL_MANIFEST=https://github.com/Fraschze97/local_manifest.git
-MANIFEST_BRANCH=nusantara
+ROM_MANIFEST=repo init -u https://github.com/descendant-xi/manifests.git
+BRANCH=eleven-staging
+LOCAL_MANIFEST=https://github.com/Yasundram/local_manifest
+MANIFEST_BRANCH=main
 
 mkdir -p /tmp/rom # Where to sync source
 cd /tmp/rom
