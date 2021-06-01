@@ -3,10 +3,10 @@ env: # Environment variables to pass to all tasks
     CIRRUS_WORKING_DIR: "/tmp/ci" # Where to clone the aosp-builder repo
 
     # For rclone with google drive or any cloud! After first commit pushing, login to https://cirrus-ci.com , click top left corner 3 dot menu, click repository(yourname/aosp-builder) > Repository Settings > Secured Variables > enter content of ~/.config/rclone/rclone.conf (from pc where you setup rclone) > ENCRYPT, copy that ENCRYPTED hash
-    rclone_config: "ENCRYPTED[f7a6018fa5bfd5a2b139d23f5a78cedbc0fe2d9a533cfd4e50bf04ac9c8046e32dfa6814faaccfde0ca814eb20f6713c]"
+    rclone_config: ""
 
 task:
-    name: RMX1941-Nusantara-ccache # Project name
+    name: RMX1941-descendant # Project name
     timeout_in: 120m # Otherwise it will timeout at 60m automatically, 120m highest in free account
     container:
       image: apon77/aosp:latest # It has built-in setup environment + repo, aria2, rclone, pigz, username ci, and email ci@ci.ci [You can use your own docker image if you want, or you can use this one too!]
