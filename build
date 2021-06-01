@@ -1,8 +1,12 @@
 #!/bin/bash
 cd /tmp/rom
 
-. build/envsetup.sh
-lunch nad_RMX1941-userdebug
+source build/envsetup.sh
+
+lunch descendant_RMX1941-descendant
+
+mka descendant
+
 
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
