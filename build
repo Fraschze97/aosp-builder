@@ -14,8 +14,7 @@ ccache -z
 
 make init
 make sepolicy
-make test-api-stubs-docs
-make system-api-stubs-docs
+make bootimage
 
 make nad &
 sleep 75m
