@@ -7,10 +7,10 @@ env: # Environment variables to pass to all tasks
     rclone_config: "ENCRYPTED[d07a56363e04323d9635031aba9d2e6fb5b8a6dbd0a64e48f5f43feacb671088eb1c82fa90cad47b619127ced1d72d56]"
 
 task:
-    name: rum # Project name
+    name: testing bro # Project name
     timeout_in: 120m # Otherwise it will timeout at 60m automatically, 120m highest in free account
     container:
-      image: apon77/aosp:latest # It has built-in setup environment + repo, aria2, rclone, pigz, username ci, and email ci@ci.ci [You can use your own docker image if you want, or you can use this one too!]
+      image: Fraschze97/aosp:latest # It has built-in setup environment + repo, aria2, rclone, pigz, username ci, and email ci@ci.ci [You can use your own docker image if you want, or you can use this one too!]
       cpu: 4  #8 or less cpu for dummy build, 8 cpu for the final build, 8cpu highest for free accounts. Don't try to use more than 8cpu as free user, you may get blocked by ci.
       memory: 16G # So that we can have ram when needed, 32G highest
     download_ccache_background_script: # To download ccache in background
