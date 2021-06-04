@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /tmp/rom/lah # Depends on where source got synced
+cd /tmp/rom # Depends on where source got synced
 
 # Normal build steps
 . build/envsetup.sh
@@ -13,15 +13,10 @@ ccache -o compression=true
 ccache -z
 ccache -s
 
-# metalava
-make_metalava(){
 	make sepolicy
 	make init
 	make booimage
-}
-
-make_metalava
-mka nad
+	mka nad
 #sleep 75m
 #kill %1 || echo "Build already failed or completed"
 ccache -s
