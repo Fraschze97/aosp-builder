@@ -15,7 +15,7 @@ ccache -s
 
 	make sepolicy
 	make init
-	make booimage
+	make bootimage
 	mka nad
 #sleep 75m
 #kill %1 || echo "Build already failed or completed"
