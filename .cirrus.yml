@@ -4,7 +4,7 @@ env: # Environment variables to pass to all tasks
 
     # For rclone with google drive or any cloud! After first commit pushing, login to https://cirrus-ci.com , click top left corner 3 dot menu, click repository(yourname/aosp-builder) > Repository Settings > Secured Variables > enter content of ~/.config/rclone/rclone.conf (from pc where you setup rclone) > ENCRYPT, copy that ENCRYPTED hash
     # ENCRYPTED variables is unique for every repository, so you cant use my one, create you rclone config https://rclone.org/drive/#making-your-own-client-id
-    rclone_config: "ENCRYPTED[d07a56363e04323d9635031aba9d2e6fb5b8a6dbd0a64e48f5f43feacb671088eb1c82fa90cad47b619127ced1d72d56]"
+    rclone_config: "ENCRYPTED[4ab9ba8597fc6c82ac3f50d33d4cdaf50d1155a9da086395f3776e13994d833e9029b771d611a0cbc81b8dd486f8a33b]"
 
 task:
     name: rum # Project name
