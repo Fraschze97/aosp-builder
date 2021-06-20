@@ -12,8 +12,6 @@ ccache -o compression=true
 ccache -z
 ccache -s
 	make sepolicy
-	make init
-	make bootimage
 	mka nad
 #sleep 75m
 #kill %1 || echo "Build already failed or completed"
