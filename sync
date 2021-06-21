@@ -8,3 +8,4 @@ repo init -u --no-repo-verify --depth=1 -u https://github.com/NusantaraProject-R
 git clone https://github.com/Fraschze97/local_manifest.git --depth=1 -b nusantara11 .repo/local_manifests
 
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 8
+
