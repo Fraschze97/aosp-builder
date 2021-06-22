@@ -18,7 +18,6 @@ ccache -s
 ccache -s
 
 # upload
-
 up(){
 	curl --upload-file $1 https://transfer.sh/$(basename$1); echo
 	# 14 days, 10 GB limit
